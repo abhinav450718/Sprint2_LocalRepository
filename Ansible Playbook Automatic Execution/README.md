@@ -101,27 +101,7 @@ Secrets are securely used during execution without exposing sensitive informatio
 
 The following workflow describes how the playbook is automatically executed on target systems:
 
-```
-Ansible Control Node
-        │
-        ▼
-Load Inventory File
-        │
-        ▼
-Identify Target Systems
-        │
-        ▼
-Load Secrets Securely
-        │
-        ▼
-Establish Secure SSH Connection
-        │
-        ▼
-Execute Playbook
-        │
-        ▼
-Apply Configuration on Target Systems
-```
+<img width="465" height="419" alt="image" src="https://github.com/user-attachments/assets/4799f40c-1846-4981-8b58-f5c705a22ee5" />
 
 This workflow ensures secure and automated configuration of infrastructure.
 
