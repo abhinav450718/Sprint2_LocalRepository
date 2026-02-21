@@ -1,6 +1,7 @@
 # Ansible Playbook Automatic Execution with Inventory and Secrets Management
 
 ---
+<img width="1800" height="514" alt="image" src="https://github.com/user-attachments/assets/a83d9923-bd0e-468f-a78e-fc70b2e181cb" />
 
 ## Author Information
 
