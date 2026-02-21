@@ -1,6 +1,7 @@
 # SonarQube Disaster Recovery (DR) Documentation
 
 ---
+<img width="1850" height="451" alt="image" src="https://github.com/user-attachments/assets/86a86131-9372-4afb-ad33-c9f7ca14cad0" />
 
 ## Author Information
 
