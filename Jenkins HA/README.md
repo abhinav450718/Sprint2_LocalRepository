@@ -1,6 +1,7 @@
 # Jenkins High Availability (HA) Documentation
 
 ---
+<img width="1032" height="332" alt="image" src="https://github.com/user-attachments/assets/adf37753-5c99-489e-aaae-cf29ea35b410" />
 
 ## Author Information
 
