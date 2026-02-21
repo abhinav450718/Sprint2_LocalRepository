@@ -1,6 +1,7 @@
 # Jenkins Disaster Recovery (DR) Documentation
 
 ---
+<img width="1032" height="332" alt="image" src="https://github.com/user-attachments/assets/f03e1616-8437-469d-951d-255706d1fe5a" />
 
 ## Author Information
 
