@@ -1,6 +1,7 @@
 # Buildpiper Feature Documentation
 
 ---
+<img width="600" height="315" alt="image" src="https://github.com/user-attachments/assets/194dd98d-446f-46e6-8183-4ff2330e139c" />
 
 ## Author Information
 
