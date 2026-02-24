@@ -1,5 +1,4 @@
-# Python CI Security Checks – DAST Documentation (Attendance & Notification Services)
-
+# Python CI Security Checks – DAST Doc 
 ---
 
 ## Author Information
