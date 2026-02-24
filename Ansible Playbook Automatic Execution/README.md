@@ -1,27 +1,28 @@
-# Ansible Playbook Automatic Execution with Inventory and Secrets Management
+# Ansible Playbook Exec with "Inventory and Secrets Management"
 
 ---
+
 <img width="1800" height="514" alt="image" src="https://github.com/user-attachments/assets/a83d9923-bd0e-468f-a78e-fc70b2e181cb" />
 
 ## Author Information
 
-| Author           | Created on | Version | Last Edited On | L0 Reviewer | L1 Reviewer | L2 Reviewer |
-| ---------------- | ---------- | ------- | -------------- | ----------- | ----------- | ----------- |
-| Abhinav Sikarwar | 20-02-2026 | v1.0    | 20-02-2026     | Aayush Verma| Shreya Jaiswal| Ashwani   |
+| Author           | Created on | Version | Last Edited On | L0 Reviewer  | L1 Reviewer    | L2 Reviewer |
+| ---------------- | ---------- | ------- | -------------- | ------------ | -------------- | ----------- |
+| Abhinav Sikarwar | 20-02-2026 | v1.0    | 20-02-2026     | Aayush Verma | Shreya Jaiswal | Ashwani     |
 
 ---
 
 ## Table of Contents
 
-1. Introduction
-2. Playbook Automatic Execution Overview
-3. Inventory Management
-4. Secrets Management
-5. Playbook Execution Workflow
-6. Execution Command
-7. Conclusion
-8. Contact Information
-9. References
+1. [Introduction](#1-introduction)
+2. [Playbook Automatic Execution Overview](#2-playbook-automatic-execution-overview)
+3. [Inventory Management](#3-inventory-management)
+4. [Secrets Management](#4-secrets-management)
+5. [Playbook Execution Workflow](#5-playbook-execution-workflow)
+6. [Execution Command](#6-execution-command)
+7. [Conclusion](#7-conclusion)
+8. [Contact Information](#8-contact-information)
+9. [References](#9-references)
 
 ---
 
@@ -136,18 +137,17 @@ Ansible playbook automatic execution enables secure and consistent configuration
 
 ## 8. Contact Information
 
-| Name             | Email                              |
-| ---------------- | ---------------------------------- |
-| Abhinav Sikarwar | abhinav.sikarwar@mygurukulam.co    |
+| Name             | Email                                                                     |
+| ---------------- | ------------------------------------------------------------------------- |
+| Abhinav Sikarwar | [abhinav.sikarwar@mygurukulam.co](mailto:abhinav.sikarwar@mygurukulam.co) |
 
 ---
 
 ## 9. References
 
-| Reference               | Description                                 |
-| ----------------------- | ------------------------------------------- |
-| Ansible Documentation CI| [Ansible Documentation CI](https://faisalakhan98.atlassian.net/browse/SCRUM-51) |
-| Ansible Documentation CD| [Ansible Documentation CD](https://faisalakhan98.atlassian.net/browse/SCRUM-52) |
-
+| Reference                | Description                                                                     |
+| ------------------------ | ------------------------------------------------------------------------------- |
+| Ansible Documentation CI | [Ansible Documentation CI](https://faisalakhan98.atlassian.net/browse/SCRUM-51) |
+| Ansible Documentation CD | [Ansible Documentation CD](https://faisalakhan98.atlassian.net/browse/SCRUM-52) |
 
 ---
