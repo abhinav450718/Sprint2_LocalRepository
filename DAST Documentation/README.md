@@ -18,10 +18,10 @@
 5. [DAST Tools](#5-dast-tools)
 6. [Tools Comparison](#6-tools-comparison)
 7. [Advantages of DAST](#7-advantages-of-dast)
-8. [Best Practices](#9-best-practices)
-9. [Recommendation and Conclusion](#10-recommendation-and-conclusion)
-10. [Contact Information](#11-contact-information)
-11. [References](#12-references)
+8. [Best Practices](#8-best-practices)
+9. [Recommendation and Conclusion](#9-recommendation-and-conclusion)
+10. [Contact Information](#10-contact-information)
+11. [References](#11-references)
 
 ---
 
