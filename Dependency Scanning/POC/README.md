@@ -65,7 +65,6 @@ Output:
 ```
 trivy installed successfully
 ```
-<img width="924" height="114" alt="image" src="https://github.com/user-attachments/assets/0b9eaaea-8ec8-4df9-ba39-d8a058e8b520" />
 
 ---
 
@@ -82,7 +81,7 @@ Output:
 ```
 Version: 0.52.2
 ```
-<img width="1600" height="247" alt="image" src="https://github.com/user-attachments/assets/dfcf52a0-f20b-4bc0-a798-2df90b93c6ef" />
+<img width="924" height="114" alt="image" src="https://github.com/user-attachments/assets/0b9eaaea-8ec8-4df9-ba39-d8a058e8b520" />
 
 This confirms Trivy is installed successfully.
 
@@ -111,18 +110,6 @@ Paste vulnerable dependencies:
 
 
 Save file.
-
-Verify file:
-
-```bash
-ls
-```
-
-Output:
-
-```
-requirements.txt
-```
 
 ---
 
@@ -155,13 +142,6 @@ Output shows:
 * Installed version
 * Fixed version
 
-Example:
-
-```
-Flask     HIGH       1.0.2    Fixed: 2.3.3
-requests  HIGH       2.19.1   Fixed: 2.31.0
-celery    CRITICAL   4.2.0    Fixed: 5.3.4
-```
 <img width="1193" height="1012" alt="image" src="https://github.com/user-attachments/assets/d962296a-413d-4a0c-a412-7582ad359e1a" />
 
 This confirms vulnerable dependencies.
