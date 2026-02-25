@@ -1,4 +1,33 @@
-# Proof of Concept (POC): DAST using OWASP ZAP on Python Attendance & Notification Application
+# Proof of Concept (POC): DAST using "OWASP ZAP"
+
+---
+
+## Author Information
+
+| Author           | Created on | Version | Last Edited On | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+| ---------------- | ---------- | ------- | -------------- | ----------- | ----------- | ----------- |
+| Abhinav Sikarwar | 25-02-2026 | v1.0    | 25-02-2026     | Aayush Verma| Shreya Jaiswal| Ashwani  |
+
+---
+
+## Table of Contents
+
+1. [Objective](#1-objective)
+2. [Environment Details](#2-environment-details)
+3. [Step 1: Download OWASP ZAP](#3-step-1-download-owasp-zap)
+4. [Step 2: Extract OWASP ZAP](#4-step-2-extract-owasp-zap)
+5. [Step 3: Start OWASP ZAP](#5-step-3-start-owasp-zap)
+6. [Step 4: Create Python Attendance and Notification Application](#6-step-4-create-python-attendance-and-notification-application)
+7. [Step 5: Install Flask](#7-step-5-install-flask)
+8. [Step 6: Run Python Application](#8-step-6-run-python-application)
+9. [Step 7: Perform DAST Scan using OWASP ZAP](#9-step-7-perform-dast-scan-using-owasp-zap)
+10. [Step 8: Vulnerability Detection](#10-step-8-vulnerability-detection)
+11. [Step 9: Generate DAST Security Report](#11-step-9-generate-dast-security-report)
+12. [Step 10: View Security Report](#12-step-10-view-security-report)
+13. [What Happens Internally](#13-what-happens-internally)
+14. [DAST Workflow Diagram](#14-dast-workflow-diagram)
+15. [Result](#15-result)
+16. [Conclusion](#16-conclusion)
 
 ---
 
@@ -29,6 +58,8 @@ Download OWASP ZAP from official GitHub release:
 wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2.16.1_Linux.tar.gz
 ```
 
+<img width="1600" height="560" alt="image" src="https://github.com/user-attachments/assets/7c106d18-5454-4e30-86fd-1a42f55b0c71" />
+
 This downloads the OWASP ZAP package.
 
 Verification:
@@ -52,6 +83,8 @@ Extract the downloaded file:
 ```bash
 tar -xvf ZAP_2.16.1_Linux.tar.gz
 ```
+
+<img width="1488" height="1010" alt="image" src="https://github.com/user-attachments/assets/e884d980-b8b8-40a4-95c3-aa85bbc97dbe" />
 
 Move into directory:
 
@@ -84,6 +117,9 @@ Run OWASP ZAP:
 ./zap.sh
 ```
 
+<img width="1600" height="853" alt="image" src="https://github.com/user-attachments/assets/1eebf3d7-7a6d-452a-a12d-c9f58c381fc1" />
+<img width="1600" height="848" alt="image" src="https://github.com/user-attachments/assets/05057e2a-2e23-4f64-afd4-a76b37d7f720" />
+
 OWASP ZAP GUI opens successfully.
 
 This tool will perform dynamic security scanning.
@@ -95,35 +131,12 @@ This tool will perform dynamic security scanning.
 Create application file:
 
 ```bash
-mkdir dast-test
-cd dast-test
 nano attendance_app.py
 ```
 
 Paste the following code:
 
-```python
-from flask import Flask, request
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Attendance Service Running"
-
-@app.route("/login")
-def login():
-    username = request.args.get("username")
-    return "Welcome " + username
-
-@app.route("/notify")
-def notify():
-    msg = request.args.get("msg")
-    return "Notification sent: " + msg
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
-```
+![WhatsApp Image 2026-02-25 at 2 29 58 PM](https://github.com/user-attachments/assets/5b042411-cfc3-49b8-a0c2-c7e162fe6b69)
 
 Save file.
 
@@ -136,8 +149,10 @@ This application contains intentionally vulnerable endpoints.
 Install Flask:
 
 ```bash
-pip install flask
+sudo apt install python3-flask
 ```
+
+<img width="1393" height="958" alt="image" src="https://github.com/user-attachments/assets/a095f8fd-3e72-44bc-8ef8-8fc99aa7080e" />
 
 ---
 
@@ -154,6 +169,8 @@ Output:
 ```
 Running on http://127.0.0.1:5000
 ```
+
+<img width="1570" height="955" alt="image" src="https://github.com/user-attachments/assets/d44fcebb-2e85-4a5e-8b10-2432734217d3" />
 
 The application is now live and ready for security scanning.
 
@@ -181,19 +198,13 @@ Click:
 Attack
 ```
 
+<img width="1600" height="846" alt="image" src="https://github.com/user-attachments/assets/0e9e0ead-858e-4356-8102-6c2fce28dcc8" />
+
 OWASP ZAP performs the following actions:
 
 * Spider Scan → discovers endpoints
 * Passive Scan → analyzes responses
 * Active Scan → sends attack payloads
-
-Discovered endpoints:
-
-```
-/
-/login
-/notify
-```
 
 ---
 
@@ -211,6 +222,8 @@ All vulnerabilities appear under:
 ```
 Alerts Tab
 ```
+
+<img width="1600" height="319" alt="image" src="https://github.com/user-attachments/assets/e681e1aa-4683-46ef-82b5-cce03266e33f" />
 
 Each vulnerability includes:
 
@@ -243,6 +256,8 @@ Save file as:
 2026-02-25-ZAP-Report-.html
 ```
 
+<img width="1600" height="845" alt="image" src="https://github.com/user-attachments/assets/7e04b6fa-6496-41ec-a79b-abc5fbc6f120" />
+
 Report is successfully generated.
 
 ---
@@ -255,6 +270,9 @@ Copy report to Downloads folder:
 cp "2026-02-25-ZAP-Report-.html" /mnt/c/Users/lenovo/Downloads/
 ```
 
+<img width="365" height="150" alt="image" src="https://github.com/user-attachments/assets/21c369b4-cfbd-40fd-adb9-430717da38b2" />
+<img width="1046" height="258" alt="image" src="https://github.com/user-attachments/assets/a7fcb146-8e2c-41b0-bb55-6205171f5500" />
+
 Open Downloads folder in Windows.
 
 Double-click:
@@ -262,6 +280,9 @@ Double-click:
 ```
 2026-02-25-ZAP-Report-.html
 ```
+
+<img width="1600" height="713" alt="image" src="https://github.com/user-attachments/assets/f3fb1d24-9629-44a9-876a-89ec686539ce" />
+<img width="1600" height="433" alt="image" src="https://github.com/user-attachments/assets/4713b1d3-1fbe-4d5d-918e-048b6faabf6a" />
 
 Report opens in browser.
 
@@ -318,15 +339,5 @@ This POC demonstrates how OWASP ZAP can be used to perform Dynamic Application S
 DAST helps detect exploitable vulnerabilities before deployment and is essential for secure CI/CD pipelines.
 
 OWASP ZAP is recommended due to its open-source nature, ease of use, automation support, and CI/CD integration capabilities.
-
----
-
-# 17. Files Generated in this POC
-
-```
-attendance_app.py
-2026-02-25-ZAP-Report-.html
-ZAP_2.16.1/
-```
 
 ---
