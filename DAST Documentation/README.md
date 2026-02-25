@@ -18,11 +18,10 @@
 5. [DAST Tools](#5-dast-tools)
 6. [Tools Comparison](#6-tools-comparison)
 7. [Advantages of DAST](#7-advantages-of-dast)
-8. [Proof of Concept (POC)](#8-proof-of-concept-poc)
-9. [Best Practices](#9-best-practices)
-10. [Recommendation and Conclusion](#10-recommendation-and-conclusion)
-11. [Contact Information](#11-contact-information)
-12. [References](#12-references)
+8. [Best Practices](#9-best-practices)
+9. [Recommendation and Conclusion](#10-recommendation-and-conclusion)
+10. [Contact Information](#11-contact-information)
+11. [References](#12-references)
 
 ---
 
@@ -115,22 +114,7 @@ DAST strengthens application security.
 
 ---
 
-# 8. Proof of Concept (POC)
-
-This section will include demonstration of DAST scan implementation for attendance and notification Python services.
-
-POC will include:
-
-* Running Python service
-* Running DAST scan using selected tool
-* Generated vulnerability report
-* CI pipeline integration
-
-*(To be added as per implementation)*
-
----
-
-# 9. Best Practices
+# 8. Best Practices
 
 | Practice                        | Reason                                 |
 | ------------------------------- | -------------------------------------- |
@@ -144,7 +128,7 @@ Following best practices ensures effective DAST implementation.
 
 ---
 
-# 10. Recommendation and Conclusion
+# 9. Recommendation and Conclusion
 
 ## Recommended Tool: OWASP ZAP
 
@@ -178,7 +162,7 @@ OWASP ZAP is the recommended tool due to its open-source availability, CI/CD com
 
 ---
 
-# 11. Contact Information
+# 10. Contact Information
 
 | Name             | Email                                                                     |
 | ---------------- | ------------------------------------------------------------------------- |
@@ -186,7 +170,7 @@ OWASP ZAP is the recommended tool due to its open-source availability, CI/CD com
 
 ---
 
-# 12. References
+# 11. References
 
 | Reference               | Description                                |
 | ----------------------- | ------------------------------------------ |
