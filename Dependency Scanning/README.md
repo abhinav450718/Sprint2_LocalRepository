@@ -4,9 +4,9 @@
 
 ## Author Information
 
-| Author           | Created on | Version | Last updated by  | Last Edited On | L0 Reviewer | L1 Reviewer | L2 Reviewer |
-| ---------------- | ---------- | ------- | ---------------- | -------------- | ----------- | ----------- | ----------- |
-| Abhinav Sikarwar | 25-02-2026 | v1.0    | Abhinav Sikarwar | 25-02-2026     | Aayush Verma|Shreya Jaiswal|Ashwani     |
+| Author           | Created on | Version | Last Edited On | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+| ---------------- | ---------- | ------- | -------------- | ----------- | ----------- | ----------- |
+| Abhinav Sikarwar | 25-02-2026 | v1.0    | 25-02-2026     | Aayush Verma|Shreya Jaiswal|Ashwani     |
 
 ---
 
