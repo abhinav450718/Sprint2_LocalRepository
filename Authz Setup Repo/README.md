@@ -1,4 +1,5 @@
-# Authorization (Authz) Setup POC in GitHub Repository
+# Authorization (Authz) Setup POC 
+
 ---
 
 | Author           | Created on | Version |  Last edited on | L0 Reviewer | L1 Reviewer | L2 Reviewer |
@@ -23,7 +24,7 @@
 
 ---
 
-# 1. Introduction
+## 1. Introduction
 
 Authentication verifies the identity of a user accessing a system, while Authorization determines the actions the authenticated user is allowed to perform.
 
@@ -33,7 +34,7 @@ This document demonstrates a Proof of Concept (POC) for implementing authorizati
 
 ---
 
-# 2. Objective of the POC
+## 2. Objective of the POC
 
 The objective of this POC is to demonstrate how authorization can be implemented in a GitHub repository to control access and maintain secure development workflows.
 
@@ -46,7 +47,7 @@ Key goals include:
 
 ---
 
-# 3. Prerequisites
+## 3. Prerequisites
 
 Before starting the setup, ensure the following requirements are met:
 
@@ -57,7 +58,7 @@ Before starting the setup, ensure the following requirements are met:
 
 ---
 
-# 4. Repository Setup
+## 4. Repository Setup
 
 Step 1
 Log in to GitHub and navigate to your repository.
@@ -85,7 +86,7 @@ Default Branch: main
 
 ---
 
-# 5. Adding Users and Assigning Roles
+## 5. Adding Users and Assigning Roles
 
 GitHub allows repository owners to assign different access levels to users.
 
@@ -138,7 +139,7 @@ Example configuration:
 
 ---
 
-# 6. Configuring Branch Protection Rules
+## 6. Configuring Branch Protection Rules
 
 Branch protection prevents unauthorized changes to critical branches such as **main**.
 
@@ -180,7 +181,7 @@ Enable:
 
 ---
 
-# 7. Pull Request Authorization Workflow
+## 7. Pull Request Authorization Workflow
 
 The implemented workflow ensures controlled code integration.
 
@@ -209,7 +210,7 @@ Maintainer → Review Pull Request → Approve → Merge
 
 ---
 
-# 8. Audit Trail Verification
+## 8. Audit Trail Verification
 
 GitHub maintains logs of repository activities for transparency and accountability.
 
@@ -245,7 +246,7 @@ Repository → Pull Requests → Activity
 
 ---
 
-# 9. POC Validation
+## 9. POC Validation
 
 To validate the authorization setup:
 
@@ -260,7 +261,7 @@ This confirms that branch protection and role-based access control are functioni
 
 ---
 
-# 10. Conclusion
+## 10. Conclusion
 
 This POC demonstrates how authorization can be implemented in a GitHub repository using role-based access control and branch protection policies.
 
@@ -270,12 +271,10 @@ Such authorization mechanisms help maintain code security, accountability, and s
 
 ---
 
-# 11. References
+## 11. References
 
 | Link                                                                                                                         | Description                            |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| [https://docs.github.com/en/authentication](https://docs.github.com/en/authentication)                                       | GitHub authentication documentation    |
-| [https://docs.github.com/en/repositories/configuring-branches](https://docs.github.com/en/repositories/configuring-branches) | GitHub branch protection documentation |
-| [https://docs.github.com/en/organizations/managing-access](https://docs.github.com/en/organizations/managing-access)         | GitHub access management               |
+|[ [Authz Document]([https://docs.github.com/en/authentication](https://faisalakhan98.atlassian.net/browse/SCRUM-115))](https://faisalakhan98.atlassian.net/browse/SCRUM-115)                                       | Reference authez doc    |
 
 ---
