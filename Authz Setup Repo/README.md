@@ -273,8 +273,8 @@ Such authorization mechanisms help maintain code security, accountability, and s
 
 ## 11. References
 
-| Link                                                                                                                         | Description                            |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-|[ [Authz Document]([https://docs.github.com/en/authentication](https://faisalakhan98.atlassian.net/browse/SCRUM-115))](https://faisalakhan98.atlassian.net/browse/SCRUM-115)                                       | Reference authez doc    |
+| Link                                                            | Description                            |
+| --------------------------------------------------------------- | -------------------------------------- |
+|[Authz Document](https://faisalakhan98.atlassian.net/browse/SCRUM-115)  | Reference authez doc            |
 
 ---
