@@ -12,14 +12,14 @@
 
 ## Table of Contents
 
-* [1. Purpose](#1-purpose)
-* [2. Scan Architecture](#2-scan-architecture)
-* [3. Environment Setup](#3-environment-setup)
-* [4. Trivy Scan Workflow](#4-trivy-scan-workflow)
-* [5. Attendance API Scan](#5-attendance-api-scan)
-* [6. Notification Worker Scan](#6-notification-worker-scan)
-* [7. Vulnerability Summary](#7-vulnerability-summary)
-* [8. Conclusion](#9-conclusion)
+ [1. Purpose](#1-purpose)
+ [2. Scan Architecture](#2-scan-architecture)
+ [3. Environment Setup](#3-environment-setup)
+ [4. Trivy Scan Workflow](#4-trivy-scan-workflow)
+ [5. Attendance API Scan](#5-attendance-api-scan)
+ [6. Notification Worker Scan](#6-notification-worker-scan)
+ [7. Vulnerability Summary](#7-vulnerability-summary)
+ [8. Conclusion](#9-conclusion)
 
 ---
 
