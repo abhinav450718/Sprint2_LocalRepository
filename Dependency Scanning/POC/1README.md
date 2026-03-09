@@ -1,41 +1,42 @@
-# Python Dependency Scanning – "TRIVY" 
+# Python Dependency Scanning – "TRIVY"
 
 ---
 
 ## Author Information
 
-| Author           | Created on | Version | Last edited on | L0 Reviewer | L1 Reviewer | L2 Reviewer |
-| ---------------- | ---------- | ------- | -------------- | ----------- | ----------- | ----------- |
-| Abhinav Sikarwar | 08-03-2026 | v1.0    | 08-03-2026     | Aayush Verma|Shreya Jaiswal|Ashwani     |
+| Author           | Created on | Version | Last edited on | L0 Reviewer  | L1 Reviewer    | L2 Reviewer |
+| ---------------- | ---------- | ------- | -------------- | ------------ | -------------- | ----------- |
+| Abhinav Sikarwar | 08-03-2026 | v1.0    | 08-03-2026     | Aayush Verma | Shreya Jaiswal | Ashwani     |
 
 ---
 
 ## Table of Contents
 
- [1. Purpose](#1-purpose)
- [2. Scan Architecture](#2-scan-architecture)
- [3. Environment Setup](#3-environment-setup)
- [4. Trivy Scan Workflow](#4-trivy-scan-workflow)
- [5. Attendance API Scan](#5-attendance-api-scan)
- [6. Notification Worker Scan](#6-notification-worker-scan)
- [7. Vulnerability Summary](#7-vulnerability-summary)
- [8. Conclusion](#9-conclusion)
+1. [Purpose](#1-purpose)  
+2. [Scan Architecture](#2-scan-architecture)  
+3. [Environment Setup](#3-environment-setup)  
+4. [Trivy Scan Workflow](#4-trivy-scan-workflow)  
+5. [Attendance API Scan](#5-attendance-api-scan)  
+6. [Notification Worker Scan](#6-notification-worker-scan)  
+7. [Vulnerability Summary](#7-vulnerability-summary)  
+8. [Conclusion](#8-conclusion)
 
 ---
 
 ## 1. Purpose
 
-Dependency scanning identifies vulnerabilities present in third-party libraries used by an application.
+The purpose of this document is to demonstrate a Proof of Concept (POC) for dependency vulnerability scanning using Trivy on Python-based services.
 
-Most modern applications rely on external packages such as:
+Modern applications depend heavily on third-party libraries and packages. If these dependencies contain known security vulnerabilities, they can introduce potential risks to the application and its infrastructure.
 
-* Flask
-* Jinja2
-* Werkzeug
+### This POC focuses on scanning the dependencies of two Python services:
 
-If these dependencies contain known vulnerabilities, attackers may exploit them to compromise the application.
+* Attendance API
+* Notification Worker
 
-In this POC, **Trivy** was used to scan the project dependencies for vulnerabilities.
+The objective is to identify known vulnerabilities present in the project dependencies using Trivy filesystem scanning. The scan results help developers understand security risks in external libraries and take remediation actions such as updating or replacing vulnerable packages.
+
+Additionally, this document demonstrates the scanning workflow, report generation process, and analysis of detected vulnerabilities, which can later be integrated into a CI/CD pipeline for continuous security monitoring.
 
 ---
 
@@ -67,19 +68,18 @@ Version: 0.52.2
 
 <img width="952" height="152" alt="image" src="https://github.com/user-attachments/assets/ec665ff9-420c-44f7-8556-c70a6b072526" />
 
-
 ---
 
 ## 4. Trivy Scan Workflow
 
-The dependency scan was performed using **Trivy filesystem scan**.
+The dependency scan was performed using the **Trivy filesystem scan**.
 
 Steps performed:
 
-1. Navigate to project directory
-2. Run Trivy scan
+1. Navigate to the project directory
+2. Run the Trivy scan
 3. Analyze vulnerability results
-4. Export report file
+4. Export the report file
 
 ---
 
@@ -153,6 +153,7 @@ cd ~/notification-worker
 ```bash
 trivy fs .
 ```
+
 ---
 
 ### Step 3 — Generate Report
@@ -189,6 +190,7 @@ Result:
 ```
 Clean (no vulnerabilities detected)
 ```
+
 ---
 
 ## 7. Vulnerability Summary
@@ -201,7 +203,6 @@ Clean (no vulnerabilities detected)
 Most vulnerabilities originate from outdated Python packages.
 
 ---
-
 
 ## 8. Conclusion
 
@@ -216,3 +217,4 @@ Key observations:
 Regular dependency scanning should be integrated into the **CI/CD pipeline** to maintain application security.
 
 ---
+
