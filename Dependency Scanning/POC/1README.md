@@ -230,6 +230,6 @@ Regular dependency scanning should be integrated into the **CI/CD pipeline** to 
 
 | Reference                                                                                                      | Description             |
 | -------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| [[https://www.zaproxy.org/docs/](https://www.zaproxy.org/docs/) ]                                                | OWASP ZAP Documentation |
+| [Trivy Doc](https://trivy.dev/docs/latest/guide/)                                             | TRIVY Documentation |
 
 ---
