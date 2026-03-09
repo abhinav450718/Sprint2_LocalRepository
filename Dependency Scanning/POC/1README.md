@@ -1,22 +1,29 @@
-# Dependency Vulnerability Scanning using Trivy
+# Python Dependency Scanning – "TRIVY" 
 
 ---
 
-# Table of Contents
+## Author Information
+
+| Author           | Created on | Version | Last edited on | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+| ---------------- | ---------- | ------- | -------------- | ----------- | ----------- | ----------- |
+| Abhinav Sikarwar | 08-03-2026 | v1.0    | 08-03-2026     | Aayush Verma|Shreya Jaiswal|Ashwani     |
+
+---
+
+## Table of Contents
 
 * [1. Purpose](#1-purpose)
-* [5. Scan Architecture](#5-scan-architecture)
-* [6. Environment Setup](#6-environment-setup)
-* [7. Trivy Scan Workflow](#7-trivy-scan-workflow)
-* [8. Attendance API Scan](#8-attendance-api-scan)
-* [9. Notification Worker Scan](#9-notification-worker-scan)
-* [10. Vulnerability Summary](#10-vulnerability-summary)
-* [11. Remediation](#11-remediation)
-* [12. Conclusion](#12-conclusion)
+* [2. Scan Architecture](#2-scan-architecture)
+* [3. Environment Setup](#3-environment-setup)
+* [4. Trivy Scan Workflow](#4-trivy-scan-workflow)
+* [5. Attendance API Scan](#5-attendance-api-scan)
+* [6. Notification Worker Scan](#6-notification-worker-scan)
+* [7. Vulnerability Summary](#7-vulnerability-summary)
+* [8. Conclusion](#9-conclusion)
 
 ---
 
-# 1. Purpose
+## 1. Purpose
 
 Dependency scanning identifies vulnerabilities present in third-party libraries used by an application.
 
@@ -32,33 +39,19 @@ In this POC, **Trivy** was used to scan the project dependencies for vulnerabili
 
 ---
 
-# 5. Scan Architecture
+## 2. Scan Architecture
 
-```text
-Application Source Code
-        │
-        ▼
-Dependency Files
-(poetry.lock / requirements.txt)
-        │
-        ▼
-Trivy Filesystem Scan
-        │
-        ▼
-Vulnerability Database Lookup
-        │
-        ▼
-Detected CVEs
-        │
-        ▼
-Security Report Generated
-```
+<img width="420" height="338" alt="image" src="https://github.com/user-attachments/assets/93a15591-46ea-49ad-9a21-49525d6e628a" />
 
 ---
 
-# 6. Environment Setup
+## 3. Environment Setup
 
 ### Install Trivy
+
+```bash
+sudo snap install trivy
+```
 
 Verify installation:
 
@@ -72,15 +65,12 @@ Example output:
 Version: 0.52.2
 ```
 
-📸 **Screenshot Placeholder**
+<img width="952" height="152" alt="image" src="https://github.com/user-attachments/assets/ec665ff9-420c-44f7-8556-c70a6b072526" />
 
-```
-Add Screenshot: Trivy installation verification
-```
 
 ---
 
-# 7. Trivy Scan Workflow
+## 4. Trivy Scan Workflow
 
 The dependency scan was performed using **Trivy filesystem scan**.
 
@@ -93,7 +83,7 @@ Steps performed:
 
 ---
 
-# 8. Attendance API Scan
+## 5. Attendance API Scan
 
 ### Step 1 — Navigate to Project
 
@@ -101,25 +91,13 @@ Steps performed:
 cd ~/attendance
 ```
 
-📸 **Screenshot**
-
-```
-Add Screenshot: Attendance API project directory
-```
-
----
-
 ### Step 2 — Run Trivy Scan
 
 ```bash
 trivy fs .
 ```
 
-📸 **Screenshot**
-
-```
-Add Screenshot: Trivy scanning attendance API
-```
+<img width="1483" height="532" alt="image" src="https://github.com/user-attachments/assets/81d1327c-24f5-4270-8af9-98460083f933" />
 
 ---
 
@@ -129,11 +107,8 @@ Add Screenshot: Trivy scanning attendance API
 trivy fs --format table -o trivy_attendance_report.txt .
 ```
 
-📸 **Screenshot**
-
-```
-Add Screenshot: Trivy report generation
-```
+<img width="1278" height="892" alt="image" src="https://github.com/user-attachments/assets/86187476-2f9c-40b3-9afa-9b60e84db060" />
+<img width="1283" height="151" alt="image" src="https://github.com/user-attachments/assets/02d37463-08d2-47cd-84ea-ae9eba27c2b0" />
 
 ---
 
@@ -163,15 +138,9 @@ Detected vulnerable libraries:
 | Jinja2   | CVE-2024-22195 |
 | Werkzeug | CVE-2024-34069 |
 
-📸 **Screenshot**
-
-```
-Add Screenshot: Trivy vulnerability results for Attendance API
-```
-
 ---
 
-# 9. Notification Worker Scan
+## 6. Notification Worker Scan
 
 ### Step 1 — Navigate to Project
 
@@ -179,26 +148,11 @@ Add Screenshot: Trivy vulnerability results for Attendance API
 cd ~/notification-worker
 ```
 
-📸 **Screenshot**
-
-```
-Add Screenshot: Notification worker directory
-```
-
----
-
 ### Step 2 — Run Trivy Scan
 
 ```bash
 trivy fs .
 ```
-
-📸 **Screenshot**
-
-```
-Add Screenshot: Trivy scanning notification worker
-```
-
 ---
 
 ### Step 3 — Generate Report
@@ -207,11 +161,9 @@ Add Screenshot: Trivy scanning notification worker
 trivy fs --format table -o trivy_notification_report.txt .
 ```
 
-📸 **Screenshot**
+<img width="1600" height="406" alt="image" src="https://github.com/user-attachments/assets/63194a51-1839-4b3d-842a-00b21b3bd02f" />
 
-```
-Add Screenshot: Trivy notification report
-```
+<img width="1600" height="180" alt="image" src="https://github.com/user-attachments/assets/e11f1578-7667-4723-96f4-420902dca47f" />
 
 ---
 
@@ -237,16 +189,9 @@ Result:
 ```
 Clean (no vulnerabilities detected)
 ```
-
-📸 **Screenshot**
-
-```
-Add Screenshot: Notification worker clean scan
-```
-
 ---
 
-# 10. Vulnerability Summary
+## 7. Vulnerability Summary
 
 | Service             | Vulnerabilities             |
 | ------------------- | --------------------------- |
@@ -257,24 +202,8 @@ Most vulnerabilities originate from outdated Python packages.
 
 ---
 
-# 11. Remediation
 
-To fix vulnerabilities, dependencies should be upgraded.
-
-Example:
-
-```bash
-pip install --upgrade flask jinja2 werkzeug
-```
-
-Or update dependency definitions in:
-
-* `poetry.lock`
-* `requirements.txt`
-
----
-
-# 12. Conclusion
+## 8. Conclusion
 
 Dependency vulnerability scanning was successfully performed using **Trivy**.
 
