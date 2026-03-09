@@ -20,7 +20,8 @@
 6. [Notification Worker Scan](#6-notification-worker-scan)  
 7. [Vulnerability Summary](#7-vulnerability-summary)  
 8. [Conclusion](#8-conclusion)
-
+9. [Contact Information](#9-contact-information)
+10. [References](#10-references)
 ---
 
 ## 1. Purpose
@@ -217,4 +218,18 @@ Key observations:
 Regular dependency scanning should be integrated into the **CI/CD pipeline** to maintain application security.
 
 ---
+# 9. Contact Information
 
+| Name             | Email |
+| ---------------- | ----- |
+| Abhinav Sikarwar |[abhinav.sikarwar@mygurukulam.co](abhinav.sikarwar@mygurukulam.co)    |
+
+---
+
+# 10. References
+
+| Reference                                                                                                      | Description             |
+| -------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| [[https://www.zaproxy.org/docs/](https://www.zaproxy.org/docs/) ]                                                | OWASP ZAP Documentation |
+
+---
